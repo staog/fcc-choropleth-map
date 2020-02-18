@@ -21,5 +21,8 @@ const svg = main.append("svg")
                    .attr("width", width)
                    .attr("height", height);
   
+const projection = d3.geoMercator();
+const pathGenereator = d3.geoPath(projection(projection));
+  
 
 };
