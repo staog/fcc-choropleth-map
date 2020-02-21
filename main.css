@@ -11,3 +11,13 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
+#title, #description {
+  text-align: center;
+}
+
+svg {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #222, -2px -2px 5px #222;
+}
