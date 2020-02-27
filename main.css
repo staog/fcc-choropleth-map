@@ -17,7 +17,7 @@ body {
 }
 
 svg {
-  background-color: gray;
+  background-color: white;
   border-radius: 5px;
   box-shadow: 1px 1px 3px #222, -2px -2px 5px #222;
 }
