@@ -35,14 +35,6 @@ function choroplethmap(data) {
                   .attr("align", "centre")
                   .attr("width", width)
                   .attr("height", height);
-  
-  svg.append("g")
-     .attr("class", "county")
-     .selectAll("path")
-     .data(counties)
-     .enter()
-     .append("path")
-     .attr("d", path);
 
   const projection = d3.geoMercator();
   const pathGenereator = d3.geoPath(projection(projection));
