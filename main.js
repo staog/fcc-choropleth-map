@@ -25,18 +25,18 @@ var svg = main.append("svg")
 
 var path = d3.geoPath();
 
-d3.json("https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json", function(error, us) {
-  if (error) throw error;
+d3.json("https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json", us => {
 
   svg.append("g")
      .attr("class", "counties")
      .selectAll("path")
      .data(topojson.feature(us, us.objects.counties).features)
-     .enter().append("path")
+     .enter()
+     .append("path")
      .attr("d", path)
      .attr("fill", "darkcyan");
 
   svg.append("path")
       .attr("class", "county-borders")
-      .attr("d", path(topojson.mesh(us, us.objects.counties, function(a, b) { return a !== b; })));
+      .attr("d", path(topojson.mesh(us, us.objects.counties, (a, b) => a !== b)));
 });
