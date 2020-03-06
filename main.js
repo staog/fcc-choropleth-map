@@ -17,9 +17,16 @@ function choroplethmap(data) {
     bottom: 20,
     left: 20
   }
+  
+  const colors = [
+    '#90caf9',
+    '#42a5f5',
+    '#1e88e5',
+    '#1565c0',
+  ];
 
   const innerWidth = width - margin.left - margin.right;
-  const innerHeight = height - margin.top - margin.bottom;
+  const innerHeight = height - margin.top - margin.bottom;  
 
   const main = d3.select("#main");
 
