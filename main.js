@@ -17,16 +17,9 @@ function choroplethmap(data) {
     bottom: 20,
     left: 20
   }
-  
-  const colors = [
-    '#90caf9',
-    '#42a5f5',
-    '#1e88e5',
-    '#1565c0',
-  ];
 
   const innerWidth = width - margin.left - margin.right;
-  const innerHeight = height - margin.top - margin.bottom;  
+  const innerHeight = height - margin.top - margin.bottom;
 
   const main = d3.select("#main");
 
@@ -47,7 +40,7 @@ function choroplethmap(data) {
   const path = d3.geoPath();
 
   svg.append("g")
-     .attr("class", "counties")
+     .attr("class", "county")
      .selectAll("path")
      .data(topojson.feature(data[1], data[1].objects.counties).features)
      .enter()
@@ -60,4 +53,3 @@ function choroplethmap(data) {
       .attr("d", path(topojson.mesh(data[1], data[1].objects.counties, (a, b) => a !== b)));
   
 };
-
