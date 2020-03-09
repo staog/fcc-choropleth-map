@@ -7,8 +7,6 @@ Promise.all(files.map(url => d3.json(url))).then(values => choroplethmap(values)
 
 function choroplethmap(data) {
   
-  console.log(data)
-  
   const width = 960;
   const height = 600;
   const margin = {
@@ -20,6 +18,17 @@ function choroplethmap(data) {
 
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
+  
+  const colors = [
+    '#90caf9',
+    '#64b5f6',
+    '#42a5f5',
+    '#2196f3',
+    '#1e88e5',
+    '#1976d2',
+    '#1565c0',
+    '#0d47a1'
+  ];
 
   const main = d3.select("#main");
 
