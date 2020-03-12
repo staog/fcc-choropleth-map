@@ -20,7 +20,7 @@ svg {
 }
 
 .county :hover {
-  fill: lightcoral;
+  fill: #90caf9;
 }
 
 .county-borders {
