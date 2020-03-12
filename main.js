@@ -55,7 +55,7 @@ function choroplethmap(data) {
      .enter()
      .append("path")
      .attr("d", path)
-     .attr("fill", "darkcyan");
+     .attr("fill", "#1976d2");
 
   svg.append("path")
       .attr("class", "county-borders")
